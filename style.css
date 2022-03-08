@@ -1,0 +1,123 @@
+/* Font import */
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+
+/* Global CSS variables */
+:root {
+    /* Primary colors */
+    --Dark-cyan: hsl(185, 75%, 39%);
+    --Very-dark-desaturated-blue: hsl(229, 23%, 23%);
+    --Dark-grayish-blue: hsl(227, 10%, 46%);
+
+    /* Neutral colors */
+    --Dark-gray: hsl(0, 0%, 59%);
+
+    /* Font family */
+    --Font-family: 'Kumbh Sans', sans-serif;
+}
+
+/* Apply a natural box layout model to all elements, but allowing components to change */
+html {
+    box-sizing: border-box;
+}
+
+body{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    
+    /* Background Images */
+    background-color: var(--Dark-cyan);
+    background-image: url(/images/bg-pattern-top.svg), url(/images/bg-pattern-bottom.svg);
+    background-repeat: no-repeat, no-repeat;
+    background-position: right 48vw bottom 48vh, left 47vw top 58vh;
+    font-family : var(--Font-family);
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+h2{
+    font-weight: 700;
+    font-size: 20px;
+    color: var(--Very-dark-desaturated-blue);
+    text-align: center;
+}
+
+p {
+    font-weight: 400;
+    font-size: 15px;
+    margin-top: 0;
+    color: var(--Dark-grayish-blue);
+    text-align: center;
+}
+
+/* Card */
+.card{
+    display: flex;
+    flex-direction: column;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+}
+
+/* Card image*/
+.card-image img{
+    width: 100%;
+    height: 160px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    object-fit: cover;
+}
+
+/* Profile image*/
+.profile-image img{
+    display: block;
+    width: 120px;
+    height: 120px;
+    margin: -62px auto 0 auto;
+    border-radius: 100px;
+    border: 8px solid white;
+}
+  
+/* Card content*/
+.card-content h2{
+    font-size: 18px;
+    text-align: center;
+    margin-top: 1rem;
+}
+
+.card-content h2 span{
+    text-align: center;
+    color: var(--Dark-gray);
+    font-size: 18px;
+    font-weight: 700;
+    margin-left: 5px;
+}
+  
+.card-content p{
+    font-size: 16px;
+    margin-top: 0;
+    margin-bottom: 2rem;
+    text-align: center;
+    color: var(--Dark-gray);
+    font-weight: 400;
+    
+}
+
+/* Stats */
+.stats {
+    display: grid;      
+    grid-template-columns: repeat(3, 1fr);
+    padding: 1rem;
+    justify-items: center;
+    border-top: 1px solid var(--Dark-gray);
+    letter-spacing: 1px;
+}  
+
+.stats h2 {
+    margin-bottom: 5px;
+}
